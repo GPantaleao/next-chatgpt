@@ -5,6 +5,7 @@ import { SessionProvider } from '@/components/SessionProvider';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import Login from '@/components/Login';
+import ClientProvider from '@/components/ClientProvider';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,7 +15,7 @@ export const metadata = {
 }
 
 export default async function RootLayout({ children, }: { children: React.ReactNode }) {
-  const session = await getServerSession(authOptions)
+  const session = await getServerSession(authOptions);
 
   return (
     <html lang="en">
@@ -28,7 +29,7 @@ export default async function RootLayout({ children, }: { children: React.ReactN
                 <Sidebar />
               </div>
 
-              {/* ClientProvider - Notification */}
+              <ClientProvider />
 
               <div className="bg-[#343541] flex-1">{children}</div>
             </div>
