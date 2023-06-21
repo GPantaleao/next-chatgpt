@@ -7,3 +7,13 @@ interface Message {
     avatar: string;
   };
 }
+
+interface Chat {
+  chatId: string;
+}
+
+interface ModelOptions {
+  value: string;
+  label: string;
+}
+
