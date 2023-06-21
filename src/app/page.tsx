@@ -15,9 +15,9 @@ export default function Home() {
           </div>
 
           <div className="space-y-2">
-            <p className="infoText">&quot;Explain Something To me&quot;</p>
-            <p className="infoText">&quot;Explain Something To me&quot;</p>
-            <p className="infoText">&quot;Explain Something To me&quot;</p>
+            <p className="infoText">&quot;How do I make an HTTP request in Javascript?&quot;</p>
+            <p className="infoText">&quot;Explain quantum computing in simple terms&quot;</p>
+            <p className="infoText">&quot;Methods to help and prevent global warming&quot;</p>
           </div>
         </div>
 
@@ -28,9 +28,9 @@ export default function Home() {
           </div>
 
           <div className="space-y-2">
-            <p className="infoText">&quot;Explain Something To me&quot;</p>
-            <p className="infoText">&quot;Explain Something To me&quot;</p>
-            <p className="infoText">&quot;Explain Something To me&quot;</p>
+            <p className="infoText">&quot;Remembers what user said earlier in the conversation&quot;</p>
+            <p className="infoText">&quot;Allows user to provide follow-up corrections&quot;</p>
+            <p className="infoText">&quot;Trained to decline inappropriate requests&quot;</p>
           </div>
         </div>
 
@@ -41,9 +41,9 @@ export default function Home() {
           </div>
 
           <div className="space-y-2">
-            <p className="infoText">&quot;Explain Something To me&quot;</p>
-            <p className="infoText">&quot;Explain Something To me&quot;</p>
-            <p className="infoText">&quot;Explain Something To me&quot;</p>
+            <p className="infoText">&quot;May occasionally generate incorrect information&quot;</p>
+            <p className="infoText">&quot;May occasionally produce harmful instructions or biased content&quot;</p>
+            <p className="infoText">&quot;Limited knowledge of world and events after 2021&quot;</p>
           </div>
         </div>
       </div>
