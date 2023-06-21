@@ -5,36 +5,32 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useCollection } from "react-firebase-hooks/firestore";
-import { db } from "../../firebase";
+import { db } from "../lib/firebase";
 
-interface ChatRowProps {
-  id: string;
-}
-
-export default function ChatRow({ id }: ChatRowProps) {
+export default function ChatRow({ chatId }: Chat) {
   const pathname = usePathname();
   const router = useRouter();
   const { data: session } = useSession();
   const [active, setActive] = useState(false);
 
   const [messages, loading, error] = useCollection(
-    collection(db, "users", session?.user?.email!, "chats", id, "messages")
+    collection(db, "users", session?.user?.email!, "chats", chatId, "messages")
   );
 
   useEffect(() => {
     if (!pathname) return;
 
-    setActive(pathname.includes(id));
-  }, [pathname, id]);
+    setActive(pathname.includes(chatId));
+  }, [pathname, chatId]);
 
   const removeChat = async () => {
-    await deleteDoc(doc(db, "users", session?.user?.email!, "chats", id));
+    await deleteDoc(doc(db, "users", session?.user?.email!, "chats", chatId));
     router.replace("/");
   };
 
   return (
     <Link
-      href={`/chat/${id}`}
+      href={`/chat/${chatId}`}
       className={`chatRow justify-center items-center ${
         active && "bg-gray-700/50"
       }`}

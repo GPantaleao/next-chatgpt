@@ -9,7 +9,7 @@ interface ChatPageProps {
 
 export default function ChatPage({ params: { id } }: ChatPageProps) {
   return (
-    <div className="flex flex-col  h-screen overflow-hidden">
+    <div className="flex flex-col h-screen overflow-hidden">
       <Chat chatId={id}/>
       <ChatInput chatId={id}/>
     </div>
