@@ -17,3 +17,11 @@ interface ModelOptions {
   label: string;
 }
 
+interface ModelOptions {
+  value: string;
+  label: string;
+}
+
+interface Model {
+  modelOptions: ModelOptions[];
+};
