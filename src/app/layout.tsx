@@ -3,9 +3,9 @@ import './globals.css'
 import Sidebar from '@/components/Sidebar';
 import { SessionProvider } from '@/components/SessionProvider';
 import { getServerSession } from 'next-auth';
-import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import Login from '@/components/Login';
 import ClientProvider from '@/components/ClientProvider';
+import { authOptions } from '@/utils/authOptions';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +20,7 @@ export default async function RootLayout({ children, }: { children: React.ReactN
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <SessionProvider session={session}>
+        <SessionProvider >
           {!session ? (
             <Login />
           ) : (

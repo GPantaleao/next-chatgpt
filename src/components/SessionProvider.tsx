@@ -6,10 +6,9 @@ import { ReactNode } from 'react'
 
 interface SessionProps {
   children: ReactNode,
-  session: Session | null;
 }
 
-export function SessionProvider({ children, session }: SessionProps) {
+export function SessionProvider({ children }: SessionProps) {
   return (
     <Provider>
       {children}
