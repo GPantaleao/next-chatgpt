@@ -6,6 +6,7 @@ import { getServerSession } from 'next-auth';
 import Login from '@/components/Login';
 import ClientProvider from '@/components/ClientProvider';
 import { authOptions } from '@/utils/authOptions';
+import { AppContextProvider } from '@/context/AppContext';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,21 +20,21 @@ export default async function RootLayout({ children, }: { children: React.ReactN
 
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased overflow-hidden`}>
         <SessionProvider >
+          <AppContextProvider>
           {!session ? (
             <Login />
           ) : (
-            <div className="flex">
-              <div className="bg-openai-800 max-w-xs overflow-y-auto md:min-w-[20rem]">
-                <Sidebar />
-              </div>
+            <div className="flex overflow-x-hidden">
+              <Sidebar />
 
               <ClientProvider />
 
-              <div className="bg-openai-500 flex-1">{children}</div>
+              <div className="bg-openai-500 flex-1 overflow-hidden transition-all">{children}</div>
             </div>
           )}
+          </AppContextProvider>
         </SessionProvider>
       </body>
     </html>

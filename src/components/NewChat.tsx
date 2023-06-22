@@ -1,13 +1,17 @@
 "use client";
 
-import { Plus } from "@phosphor-icons/react";
+import { Plus, SidebarSimple } from "@phosphor-icons/react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { db } from "../lib/firebase";
+import { useContext } from "react";
+import { AppContext } from "@/context/AppContext";
+import SidebarButton from "./SidebarButton";
 
 export default function NewChat() {
   const router = useRouter();
+  const { setIsHeaderOpen, isHeaderOpen } = useContext(AppContext);
   const { data: session } = useSession();
 
   const createNewChat = async () => {
@@ -22,9 +26,16 @@ export default function NewChat() {
   };
 
   return (
-    <div onClick={createNewChat} className="border-gray-700 border chatRow">
-      <Plus size={16} />
-      <p>New Chat</p>
+    <div className="flex items-center space-x-4">
+      <div
+        onClick={createNewChat}
+        className="border-gray-700 border chatRow flex-1"
+        title="Create new chat"
+      >
+        <Plus size={16} />
+        <p>New Chat</p>
+      </div>
+      <SidebarButton title="Hide Sidebar" onSidebar/>
     </div>
   );
 }

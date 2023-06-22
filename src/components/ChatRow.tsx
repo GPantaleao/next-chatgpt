@@ -1,17 +1,21 @@
+"use client"
+
 import { Chat, Trash } from "@phosphor-icons/react";
 import { collection, deleteDoc, doc, orderBy } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { db } from "../lib/firebase";
+import { AppContext } from "@/context/AppContext";
 
 export default function ChatRow({ chatId }: Chat) {
   const pathname = usePathname();
   const router = useRouter();
   const { data: session } = useSession();
   const [active, setActive] = useState(false);
+  const { setIsHeaderOpen, isMobile } = useContext(AppContext);
 
   const [messages, loading, error] = useCollection(
     collection(db, "users", session?.user?.email!, "chats", chatId, "messages")
@@ -34,9 +38,10 @@ export default function ChatRow({ chatId }: Chat) {
       className={`chatRow justify-center items-center ${
         active && "bg-gray-700/50"
       }`}
+      onClick={() => setIsHeaderOpen(!isMobile)}
     >
       <Chat size={20} />
-      <p className="flex-1 hidden md:inline-flex truncate">
+      <p className="flex-1 inline-flex truncate">
         {messages?.docs[messages?.docs.length - 1]?.data().text || "New Chat"}
       </p>
       <Trash
