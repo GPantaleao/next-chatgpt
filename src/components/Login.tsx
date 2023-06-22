@@ -12,7 +12,7 @@ export default async function Login() {
         onClick={() => signIn("google", { callbackUrl: "/" })}
         className="text-white font-bold text-3xl animate-pulse"
       >
-        Sign In to use ChatGPT
+        Click here to begin your session
       </button>
     </div>
   );
