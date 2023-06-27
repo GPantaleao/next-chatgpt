@@ -1,5 +1,5 @@
 <div align="center" id="top">
-   <h2>**CHAT GPT - CLONE**</h2>
+   <h1>CHAT GPT - CLONE</h1>
 </div>
 <br/>
 <div align="center">
