@@ -74,8 +74,9 @@ Projeto totalmente responsivo e funcional.
 
 ## 🔧 Instalação
 
-1. Renomeie o arquivo `.env.example` para `.env`
-1. Inicie o servidor da web em outro terminal, rodando `npm run dev` ou `yarn dev` dentro da pasta `web`
+1. Renomeie o arquivo `.env.example` para `.env` e siga as instruções e links no arquivo
+1. Instale o projeto rodando o comando `npm install`, `yarn install` ou `pnpm install` no seu terminal
+1. Inicie o servidor da web em outro terminal, rodando `npm run dev`, `yarn dev` ou `pnpm dev` no seu terminal
 1. Para utilizar o aplicativo web, basta abrir [http://localhost:3000](http://localhost:3000) em algum browser
 
 ## 💡 Contribuição
@@ -153,8 +154,9 @@ Fully responsive and functional design.
 
 ## 🔧 Installation
 
-1. Rename the `.env.example` file to `.env`
-1. start the web server in another terminal by running `npm run dev` or `yarn dev` from within the `web` folder
+1. Rename the `.env.example` file to `.env` and follow the instructions and links in the file
+1. Install the project by running `npm install`, `yarn install` or `pnpm install` in your terminal
+1. Start the web server in another terminal by running `npm run dev`, `yarn dev` or `pnpm dev`
 1. To use the web application, just open [http://localhost:3000](http://localhost:3000) in some web browser
 
 ## 💡 Contribution
