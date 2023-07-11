@@ -24,4 +24,4 @@ interface ModelOptions {
 
 interface Model {
   modelOptions: ModelOptions[];
-};
+}
