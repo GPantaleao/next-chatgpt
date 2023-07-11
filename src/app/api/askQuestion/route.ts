@@ -8,9 +8,7 @@ type Data = {
   answer: string;
 };
 
-export const config = {
-  runtime: 'edge'
-};
+export const runtime = 'nodejs'
 
 export async function POST(
   req: Request,
