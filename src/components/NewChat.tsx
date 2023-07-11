@@ -29,7 +29,7 @@ export default function NewChat() {
     <div className="flex items-center space-x-4">
       <div
         onClick={createNewChat}
-        className="border-gray-700 border chatRow flex-1"
+        className="border-gray-500 border hover:bg-gray-600/70 chatRow flex-1"
         title="Create new chat"
       >
         <Plus size={16} />
