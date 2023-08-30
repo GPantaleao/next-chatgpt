@@ -6,8 +6,8 @@
    <a href="https://github.com/SSilvaGustavo">
       <img alt="Made by SSilvaGustavo" src="https://img.shields.io/badge/made%20by-SSilvaGustavo-purple">
    </a>
-    <a href="https://github.com/SSilvaGustavo/duoz-esports/commits/main">
-      <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/SSilvaGustavo/duoz-esports">
+    <a href="https://github.com/SSilvaGustavo/next-chatgpt/commits/main">
+      <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/SSilvaGustavo/next-chatgpt">
     </a>
    <br/>
 </div>
